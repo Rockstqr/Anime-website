@@ -1,0 +1,96 @@
+@charset "UTF-8";
+body {
+  font-family: sans-serif;
+  background: #efefef;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #f47cd6;
+  color: rgb(242, 224, 224);
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  opacity: 10;
+}
+
+h1 {
+  align-items: center;
+  margin: auto;
+  color: rgb(252, 247, 247);
+}
+
+img {
+  width: 80px;
+  height: auto;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex; /* 画像とテキストを横並びにする */
+  gap: 15px;
+  background: rgb(252, 249, 249);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* ←これだけでOK */
+}
+
+a {
+  display: block;
+}
+
+.card img {
+  display: block;
+}
+
+.card img,
+.card h2 {
+  flex: 0 0 auto; /* 横並び */
+  margin-bottom: 0;
+  padding: 0;
+  border: solid;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 200px; /* 画像の幅を指定 */
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.card h2 {
+  margin: auto;
+  margin-top: 10px;
+}
+
+.card p {
+  margin: 10px;
+  color: #555;
+  border: solid;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column; /* h2とpを縦に並べる */
+  justify-content: center; /* 中央寄せも可能 */
+}/*# sourceMappingURL=style.css.map */
