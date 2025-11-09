@@ -6,18 +6,57 @@ body {
 }
 
 header {
-  background: #f47cd6;
-  color: rgb(242, 224, 224);
-  text-align: center;
-  padding: 1rem;
+   position: relative;
   display: flex;
-  opacity: 10;
+  align-items: center;
+  justify-content: space-between;
+  background: #7469f0;
+  color: #f2e0e0;
+  padding: 1rem 50px;
+  height: 90px;
+  // background: #7469f0;
+  // color: rgb(242, 224, 224);
+  // align-items: center;
+  // padding: 1rem;
+  // display: flex;
+  // opacity: 10;
+  // height: 90px;
+  // margin-bottom: 0px;
+  // justify-content: space-between;
+  // position: relative;
 }
 
-h1 {
-    align-items: center;
-    margin: auto;
+header ul{
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  // text-align: center;
+  margin: 0;
+  // margin-top: 29px;
+  text-align: center;
+  // margin-right: 50px;
+  padding: 0;
+  
+}
+
+ul li{
+  list-style: none;
+  
+}
+
+ul li a{
+  color: #efefef;
+  text-decoration: none;
+}
+
+
+header h1 {
+    text-align: center;
     color: rgb(252, 247, 247);
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  position: absolute;
 }
 img {
     width: 80px;
@@ -45,27 +84,9 @@ img {
 .card a {
   text-decoration: none;
   color: inherit;
-  display: block; /* ←これだけでOK */
+  display: flex;
+  align-items: flex-start;
 }
-
-
-
-// .card {
-//  display: flex;            /* 画像とテキストを横並びにする */
-//   gap: 15px;                /* 画像とテキストの間隔 */
-//   background: rgb(252, 249, 249);
-//   border-radius: 8px;
-//   padding: 10px;
-//   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-//   align-items: flex-start;  /* 上揃え */
-//   transition: transform .2s ease-in-out;
-// }
-
-// .card a {
-//   display: flex;
-//   text-decoration: none;
-//   color: inherit;
-// }
 
 a{
   display: block;
@@ -80,7 +101,6 @@ a{
   flex: 0 0 auto; /* 横並び */
   margin-bottom: 0;
   padding: 0;
-  border: solid;
 }
 
 .card:hover {
@@ -90,7 +110,7 @@ a{
 
 .card img {
   width: 200px;             /* 画像の幅を指定 */
-  height: auto;
+  height: 260px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -103,9 +123,7 @@ a{
 .card p {
   margin: 10px;
   color: #555;
-  // margin-top: 20px;
-  border: solid;
-  
+  margin-top: 20px;
 }
 
 .card-text {
@@ -113,3 +131,42 @@ a{
   flex-direction: column;   /* h2とpを縦に並べる */
   justify-content: center;  /* 中央寄せも可能 */
 }
+
+
+/* ハンバーガーアイコン --------------------------------*/
+.hamburger {
+  display: none; /* PCでは非表示 */
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ---- スマホサイズ以下で切り替え ---- */
+@media (max-width: 840px) {
+  .hamburger {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none; /* 初期は非表示 */
+    flex-direction: column;
+    gap: 20px;
+    background: #7469f0;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+
+  }
+
+  #nav-menu.active {
+    display: flex; /* クリック後に表示 */
+  }
+}
+
+
+#gallery {
+  display: block;
+}
+
