@@ -130,6 +130,9 @@ a {
   .hamburger {
     display: block;
   }
+  #gallery {
+  display: block;
+}/
   #nav-menu {
     display: none; /* 初期は非表示 */
     flex-direction: column;
@@ -146,6 +149,4 @@ a {
     display: flex; /* クリック後に表示 */
   }
 }
-#gallery {
-  display: block;
-}/*# sourceMappingURL=style.css.map */
+*# sourceMappingURL=style.css.map */
